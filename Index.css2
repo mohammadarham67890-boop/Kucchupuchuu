@@ -1,0 +1,47 @@
+/* ... (your existing CSS code) ... */
+
+/* Styles for the "Reasons I Love You" section */
+.reasons-section {
+    position: relative;
+    padding: 50px 20px;
+    text-align: left;
+    max-width: 600px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    color: #ff007f;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px #ff007f;
+}
+
+.reasons-list {
+    list-style-type: none; /* Removes the default bullet points */
+    counter-reset: my-counter; /* Creates a new counter */
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.reasons-list li {
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 30px;
+}
+
+/* Creates the numbered list effect using a pseudo-element */
+.reasons-list li::before {
+    counter-increment: my-counter; /* Increments the counter for each list item */
+    content: counter(my-counter) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    color: #ff007f;
+}
