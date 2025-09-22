@@ -1,0 +1,65 @@
+/* Basic Reset for cross-browser consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Sets the gradient background */
+    background: linear-gradient(135deg, #1e1e1e, #0e0e0e);
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Hides any overflow from the body */
+}
+
+/* Styles for the main container */
+.main-container {
+    text-align: center;
+}
+
+/* Styles for the content inside the header */
+.header-content {
+    animation: fadeIn 2s ease-in-out; /* Adds a fade-in animation */
+    /* Adds a glow effect to the container */
+    text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 30px #ff007f;
+}
+
+/* Styles for the heart icon */
+.fas.fa-heart {
+    font-size: 5rem;
+    color: #ff007f; /* Pink color for the heart */
+    animation: beat 1.5s infinite ease-in-out; /* Adds the beating animation */
+}
+
+/* Styles for the main heading */
+.heading {
+    font-size: 4rem;
+    margin-top: 20px;
+}
+
+/* Styles for the paragraph text */
+p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Keyframes for the fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Keyframes for the beating heart animation */
+@keyframes beat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
